@@ -1,0 +1,43 @@
+body {
+  font-family: 'Roboto';
+  color: #fff;
+  background-color: #161616;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header nav {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.unit-selector {
+	float: left;
+	width: 70px;
+	height: 20px;
+	position: relative;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.search-location-form {
+	float: right;
+	margin-right: 10%;
+}
+
+.city-input {
+	width: 300px;
+	margin-right: 20px;
+}
+
+.weather-icon {
+	font-size: 40px;
+}
+
+.unit-selection {
+	margin-left: 10%;
+}
+

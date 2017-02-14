@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,700,400' rel='stylesheet' type='text/css' crossorigin="anonymous">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap2-toggle.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <body ng-app="weatherApplication">
+        <div class="container" ng-controller="weatherController">
+            <header>
+                <nav class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group unit-selection">
+                            <button type="button" class="btn btn-primary" ng-click="chooseUnit(1)">Celsius</button>
+                            <button type="button" class="btn btn-primary" ng-click="chooseUnit(0)">Fahrenheit</button>
+                        </div>
+                        <form ng-submit="changeCity(searchCity)" class="search-location-form">
+                            <input type="text" placeholder="Search Current Weather Of Another City" ng-model="searchCity" class="city-input" required>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container-fluid weather-container">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8 text-center">
+
+                        <h1>{{ city }}, {{ country }}</h1>
+                        <h1>{{ currentHour }}:{{ currentMinute }}:{{ currentSecond }} {{ currentPeriod }}</h1>
+                        <h1>{{ weather.main.temp }} &#176;<span class="temp">{{ unit[metric] }}</span></h1>
+                        <h1>{{ weather.weather[0].description }}</h1>
+
+                        <div class="text-center weather-icon" ng-show="cloudy()">
+                            <i class="wi wi-cloudy"></i>
+                        </div>
+                        <div class="text-center weather-icon" ng-show="rainy()">
+                            <i class="wi wi-rain-mix"></i>
+                        </div>
+                        <div class="text-center weather-icon" ng-show="thunderstorm()">
+                            <i class="wi wi-thunderstorm"></i>
+                        </div>
+                        <div class="text-center weather-icon" ng-show="snow()">
+                            <i class="wi wi-snow"></i>
+                        </div>
+                        <div class="text-center weather-icon" ng-show="sunny()">
+                            <i class="wi wi-day-sunny"></i>
+                        </div>
+
+                        <h1><i class="wi wi-sunrise"></i> {{ sunrise }}</h1>
+                        <h1><i class="wi wi-sunset"></i> {{ sunset }}</h1>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
+ng-show="sunny()">
+<i class="wi wi-day-sunny"></i>
+</div>
+
+<h1><i class="wi wi-sunrise"></i> {{ sunrise }}</h1>
+<h1><i class="wi wi-sunset"></i> {{ sunset }}</h1>
+</div>
+<div class="col-sm-2"></div>
+</div>
+</div>
+</div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+
+</html>
